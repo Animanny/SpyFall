@@ -1,0 +1,89 @@
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+
+<body>
+    <div class="vcenter">
+        <div class="row">
+            <div class="col-md-3 col-centered">
+                <h1 style="text-align: center;">Spyfall</h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-3 col-centered">
+                <h5 style="text-align: center;">The classic game of friendship and betrayal.</h5>
+            </div>
+        </div>
+        <br/>
+
+        <div id="start" class="row">
+            <div class="col-md-12 col-centered">
+                <center>
+                    <button id="joingame" type="joingame" class="btn btn-primary">Join Game</button>
+                    <button id="creategame" type="creategame" class="btn btn-primary">Create Game</button>
+                </center>
+            </div>
+        </div>
+
+        <div style="display: none" id="join" class="row">
+            <div class="col-md-4 col-centered">
+                <center>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon1">@</span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                    </div>
+                    <br/>
+                    <div class="input-group mb-3">
+
+                        <input type="text" class="form-control" placeholder="Game Code" aria-label="Username" aria-describedby="basic-addon1">
+                    </div>
+                    <br/>
+                    <button id="creategame" type="creategame" class="btn btn-primary">Join Game</button>
+                    <button id="back1" type="back" class="btn btn-primary">Back</button>
+                </center>
+            </div>
+        </div>
+
+        <div style="display: none" id="create" class="row">
+            <div class="col-md-4 col-centered">
+                <center>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon1">@</span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                    </div>
+                    <br/>
+                    <button id="creategame" type="creategame" class="btn btn-primary">Create Game</button>
+                    <button id="back2" type="back" class="btn btn-primary">Back</button>
+                </center>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyB9GWXdl6rDcPef6oaE0ejc2GmMvqzKqeM",
+            authDomain: "spyfall-d7240.firebaseapp.com",
+            databaseURL: "https://spyfall-d7240.firebaseio.com",
+            projectId: "spyfall-d7240",
+            storageBucket: "",
+            messagingSenderId: "780049443760"
+        };
+        firebase.initializeApp(config);
+
+        // Get a reference to the database service
+        var database = firebase.database();
+
+    </script>
+    <script src="scripts.js"></script>
+</body>
